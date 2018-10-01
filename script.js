@@ -1,14 +1,29 @@
 $(function(){
+  var cash = $("#cash");
+  var res = $("#res");
+  var comm = $("#comm");
+  var ind = $("#ind");
+  $("#buyres").click(function(){
+    if(cash.val() == "$100,000" && res.val() == "0"){
+      cash.html("$999,900");
+      res.html("1");
+    } else if(cash.val() == "$999,900" && res.val() == "1"){
+      cash.html("$999,800");
+      res.html("2");
+    } else if(cash.val() == "$999,800" && res.val() == "2"){
+      cash.html("$999,700");
+      res.html("3");
+    } else if(cash.val() == "$999,700" && res.val() == "3"){
+      cash.html("$999,600");
+      res.html("4");
+    }
+  });
   $(document).ready(function(){
     $("#save").click(function(){
-      var cash = $("#cash").val();
-      var res = $("#red").val();
-      var comm = $("#comm").val();
-      var ind = $("#ind").val();
-      $.cookie('cash', cash, { expires : 7 });
-      $.cookie('res', res, { expires : 7 });
-      $.cookie('comm', comm, { expires : 7 });
-      $.cookie('ind', ind, { expires : 7 });
+      $.cookie('cash', cash.val(), { expires : 7 });
+      $.cookie('res', res.val(), { expires : 7 });
+      $.cookie('comm', comm.val(), { expires : 7 });
+      $.cookie('ind', ind.val(), { expires : 7 });
       });
       checkCookieValues();
   });
