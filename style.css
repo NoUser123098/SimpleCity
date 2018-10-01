@@ -2,3 +2,10 @@ body {
   background-color: #fefefe;
   font-family: sans-serif;
 }
+button {
+  border: none;
+  width: auto;
+  height: 30px;
+  background-color: dodgerblue;
+  border-radius: 10px;
+}
