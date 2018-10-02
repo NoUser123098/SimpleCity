@@ -16,6 +16,12 @@ $(function(){
     } else if(cash.val() == "$999,700" && res.val() == "3"){
       cash.html("$999,600");
       res.html("4");
+    } else if(cash.val() == "$999,600" && res.val() == "4"){
+      cash.html("$999,500");
+      res.html("5");
+    } else if(cash.val() == "$999,500" && res.val() == "5"){
+      cash.html("$999,400");
+      res.html("6");
     }
   });
   $(document).ready(function(){
