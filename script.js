@@ -22,6 +22,18 @@ $(function(){
     } else if(cash.val() == "$999,500" && res.val() == "5"){
       cash.html("$999,400");
       res.html("6");
+    } else if(cash.val() == "$999,400" && res.val() == "6"){
+      cash.html("$999,300");
+      res.html("7");
+    } else if(cash.val() == "$999,300" && res.val() == "7"){
+      cash.html("$999,200");
+      res.html("8");
+    } else if(cash.val() == "$999,200" && res.val() == "8"){
+      cash.html("$999,100");
+      res.html("9");
+    } else if(cash.val() == "$999,100" && res.val() == "9"){
+      cash.html("$999,000");
+      res.html("10");
     }
   });
   $(document).ready(function(){
